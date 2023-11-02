@@ -25,6 +25,7 @@ const authenticatedUser = (username, password) => { //returns boolean
 regd_users.post("/login", (req, res) => {
 	//Write your code here
 	// return res.status(300).json({ message: "Yet to be implemented" });
+	console.log('Received request:', req.body);
 	const username = req.body.username;
 	const password = req.body.password;
 

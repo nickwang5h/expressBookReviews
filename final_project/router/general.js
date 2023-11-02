@@ -30,7 +30,7 @@ public_users.get('/author/:author', function (req, res) {
 	//Write your code here
 	// return res.status(300).json({ message: "Yet to be implemented" });
 	let authorbooks = [];
-	for (let book of books) {
+	for (let [key, book] of Object.entries(books)) {
 		if (book.author === req.params.author) {
 			authorbooks.push(book);
 		}
